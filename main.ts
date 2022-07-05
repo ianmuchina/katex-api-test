@@ -16,7 +16,7 @@ function handler(req: Request): Response {
     var myHeaders = new Headers();
     myHeaders.append('Content-Type', 'text/html');
 
-    if ( rawHTML ) {
+    if ( rawHTML === "true" ) {
         return new Response(`${html}`, {headers: myHeaders});
     } else {
         return new Response(
